@@ -959,6 +959,14 @@ img.img-fluid.crossper {
 }
 
 @media(max-width:991px) {
+    .sc_fc_date {
+        font-size: 26px !important;
+    }
+
+    .sc_fc_time {
+        font-size: 42px !important;
+    }
+
     .sc_webinar_bullets_list ul li:not(:last-child) {
         width: 100%;
     }
@@ -1011,6 +1019,10 @@ img.img-fluid.crossper {
         padding: 5px;
     }
 
+    .sc_fc_date {
+        font-size: 22px !important;
+    }
+
     .sc_fc_schedule {
         flex-direction: column;
         gap: 26px;
@@ -1022,9 +1034,25 @@ img.img-fluid.crossper {
         margin: 0 auto;
     }
 
+    .sc_fc_time {
+        font-size: 34px !important;
+    }
+
+    .sc_fc_slot_tag {
+        font-size: 13px;
+    }
+
     .sc_fc_warning {
         flex-direction: column;
         text-align: center;
+    }
+
+    .sc_fc_warn_text strong {
+        font-size: 17px;
+    }
+
+    .sc_fc_warn_text p {
+        font-size: 15px;
     }
 
     canvas#bodyParticalCanvas {
@@ -1076,6 +1104,20 @@ img.img-fluid.crossper {
 }
 
 @media(max-width:480px) {
+    .sc_fc_date {
+        font-size: 18px !important;
+        gap: 8px;
+    }
+
+    .sc_fc_date_icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .sc_fc_time {
+        font-size: 26px !important;
+    }
+
     .sc_pre_logo a svg {
         width: 200px;
         height: auto;
