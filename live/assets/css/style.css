@@ -1043,6 +1043,14 @@ width: 109px;
 .fe_green_noice_list.inline_list> li {
     width: calc(50% - 7px);
 }
+.fe_badge_icon {
+    width: 20px;
+    height: auto;
+}
+.fe_badge_icon_sm {
+    width: 18px;
+    height: auto;
+}
 /* final buy section  section end  */
 .fe_dark_box_li {
     border-radius: 10px;

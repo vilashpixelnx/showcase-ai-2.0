@@ -471,7 +471,7 @@ canvas#bodyParticalCanvas {
     position: relative;
 }
 
-.sc_webinar_bullets_list ul li:not(:last-child) {
+.sc_webinar_bullets_list ul li {
     width: calc(50% - 15px);
 }
 
