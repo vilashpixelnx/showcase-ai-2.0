@@ -31,7 +31,7 @@
 
       <div class="mainWrap_box">
          <!-- Banner -->
-         <section class="sc_prelaunch_banner_wrapper bg_cover relative">
+         <section class="sc_prelaunch_banner_wrapper bg_cover relative" id="hero">
             <canvas id="bodyParticalCanvas"></canvas>
             <div class="container">
                <div class="sc_prelaunch_banner_head text-center">
@@ -1458,46 +1458,50 @@
 						<h2 class="sc_gredient_heading">Don't Miss This</h2>
 						<p class="sc_sub_heading">Live Webinar That Reveals How to Create Professional Videos Using AI in Minutes</p>
 					</div>
-               <div class="sc_subscribe_box">
-                  <div class="sc_subscribe_box_inner">
-                     <div class="sc_subscribe_head text-center">
-                        <h3 class="sc_subscribe_top_heading fs20 fw600 fontPlus text-capitalize pb10">5 LUCKY ATTENDEES Will Get ShowcaseAI For FREE!</h3>
-                        <h4 class="sc_subscribe_main_heading fs25 fw700 sc_primary pb30">Join the FREE Webinar That Begins Thursday, 6 August 2026 at 10:00 AM EST</h4>
+               <div class="sc_fc_wrap text-center">
+                  <div class="sc_fc_date d-inline-flex justify-content-center align-items-center fs25 fw700 fontPlus">
+                     <svg class="sc_fc_date_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                        <path d="M16 2v4M8 2v4M3 10h18"></path>
+                     </svg>
+                     <span>Thursday, 6 August 2026</span>
+                  </div>
+
+                  <div class="sc_fc_schedule d-flex justify-content-center align-items-stretch flex-wrap">
+                     <div class="sc_fc_slot d-flex flex-column align-items-center text-center">
+                        <span class="sc_fc_slot_tag">Prelaunch Webinar</span>
+                        <div class="sc_fc_time d-inline-flex align-items-center fontSyne fw700 fs36">10:00<span class="sc_fc_ampm">&nbsp;AM</span> <span class="sc_fc_est">EST</span></div>
                      </div>
-                     <div class="sc_subscribe_form_parent">
-                        <form data-smart-form data-thankyou-url="https://showcaseai.pixalab.ai/webinar-thankyou/" action="javascript:void(0);" method="post" class="sc_subscribe_form d-flex justify-content-center align-items-center" novalidate>
-                           <div class="sc_field_wrap">
-                              <div class="sc_pre_input_group">
-                                 <input type="text" name="first_name" placeholder="First Name" required />
-                              </div>
-                              <span class="field-error first-name-error" aria-live="polite"></span>
-                           </div>
-                           <div class="sc_field_wrap">
-                              <div class="sc_pre_input_group">
-                                 <input type="text" name="last_name" placeholder="Last Name" required />
-                              </div>
-                              <span class="field-error last-name-error" aria-live="polite"></span>
-                           </div>
-                           <div class="sc_field_wrap">
-                              <div class="sc_pre_input_group">
-                                 <input type="email" name="email" placeholder="Email Address" required />
-                              </div>
-                              <span class="field-error email-error" aria-live="polite"></span>
-                           </div>
-                           <input type="hidden" name="autoresponder_id" value="u9qc3">
-                           <input type="hidden" name="webinar_id" value="6130876193872384345">
-                           <button type="submit" class="sc_primary_btn">
-                              <span>Reserve Your Seat Now</span>
-                           </button>
-                           <span class="field-error submit-error" aria-live="polite"></span>
-                        </form>
-                        <div class="form-success">
-                           <div class="success-icon">✓</div>
-                           <h3>You're Registered!</h3>
-                           <p>Check your inbox for your confirmation and calendar invite.<br>See you on Thursday, 6 August 2026 at 10:00 AM EST.</p>
-                        </div>
+                     <span class="sc_fc_sched_divider" aria-hidden="true"></span>
+                     <div class="sc_fc_slot d-flex flex-column align-items-center text-center">
+                        <span class="sc_fc_slot_tag">Launch Starts</span>
+                        <div class="sc_fc_time d-inline-flex align-items-center fontSyne fw700 fs36">11:00<span class="sc_fc_ampm">&nbsp;AM</span> <span class="sc_fc_est">EST</span></div>
                      </div>
                   </div>
+
+                  <div class="sc_fc_warning d-flex align-items-center">
+                     <span class="sc_fc_warn_icon d-flex align-items-center justify-content-center" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <rect x="3" y="11" width="18" height="11" rx="2"></rect>
+                           <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                     </span>
+                     <div class="sc_fc_warn_text">
+                        <strong>Limited Seats — Don't Miss Out!</strong>
+                        <p>We cap attendance on every live session to keep quality high. Once we hit capacity, registration closes — no exceptions. Lock in your free seat right now.</p>
+                     </div>
+                     <span class="sc_fc_warn_icon d-flex align-items-center justify-content-center" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                           <circle cx="9" cy="7" r="4"></circle>
+                           <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                     </span>
+                  </div>
+
+                  <a href="#hero" class="sc_primary_btn sc_fc_btn d-inline-flex justify-content-center align-items-center">
+                     <span>Reserve My Free Seat Now</span>
+                  </a>
                </div>
             </div>
           </section>
