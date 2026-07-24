@@ -202,6 +202,22 @@ canvas#bodyParticalCanvas {
     width: 100%;
 }
 
+.sc_subscribe_form .sc_field_wrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 240px;
+    min-width: 0;
+}
+
+.sc_subscribe_form .sc_field_wrap .field-error {
+    margin-top: 6px;
+}
+
+.sc_subscribe_form {
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 .invalid {
     border-color: #ff8f8f !important;
 }
