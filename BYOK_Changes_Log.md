@@ -139,10 +139,19 @@ Use these classes instead of inline `style="width:...px;height:...px;"` on any n
 - All 4 "Test Drive Policy" CTA blocks → checkmark badge-row. This page's stylesheet didn't have `.fe_badge_icon` yet (each page has its own separate `style.css`, this class isn't shared across pages) — added it to `traffic-suite/assets/css/style.css` near its own "final buy section" comment block, using `height: auto` per the live-page convention. Icon path here is `./assets/images/final_buy/green_right.png` (same as agency, different from pro).
 - Also found and cleaned up a pre-existing empty `style=""` attribute on the nothanks heading (flagged by the linter, unrelated to BYOK, harmless but pointless).
 
-### `ai-mastery/` (OTO4) — ShowcaseAI AI Mastery
-- Remove/change: "No third-party dependencies" — directly contradicts BYOK, drop it.
-- "Generate unlimited videos" becomes true under BYOK — keep/lean into it.
-- 1-on-1 coaching (first 50) — fine as a small launch bonus, user's call.
+### `ai-mastery/index.html` (OTO4) — ShowcaseAI AI Mastery — DONE (2026-07-27)
+- No credit-language at all on this page (nothing to remove there).
+- "No Third-Party Dependencies" contradicted BYOK in 5 spots:
+  - A whole dedicated "Zero Third-Party" card (2nd of 6 in the `aa_mainFlow` cards section) → rewritten to "Unlimited Creation, Zero Limits" / "Manage everything from one centralized dashboard, with no monthly caps on what you can create." (image kept as-is).
+  - AI Website Builder "Key Benefits" bullet → "Publish-ready pages, no extra hosting or plugins needed"
+  - AI Image Generator "Key Benefits" bullet → "All-in-one dashboard, everything you need in one place"
+  - AI Content Writer "Key Benefits" bullet → "No more writer's block, ever"
+- **Structural issue found (not in the original review doc, caught while auditing):** two money-back badge images were hotlinked directly to the OLD live server — `src="https://sales.showcaseai.app/live/assets/images/money_back_white.png"` — instead of a local file. This page's own `assets/images/` only had `money_back.png` (no white variant). User added/confirmed the local image; both hotlinks were repointed to `assets/images/money_back.png`. **Open item:** that local image still has "14 Days Money Back Guarantee" baked into the pixels — needs re-exporting to 30 Days like the other pages' badge images (can't be fixed via text edit).
+- No FAQ changes needed (3 questions, none touch credits/dependencies/guarantee days).
+- No text-based "Test Drive Policy" / day-count guarantee text exists on this page at all — the only guarantee reference is the image above and a generic non-day-specific "User-Friendly Experience Guarantee" card, so no 14→30 day text replacement was needed here.
+- JVZoo main buy image-button → text CTA (using this page's own `aa_btn aa_darkbtn` class, not the `fe_green_big_btn` class used on other pages — each page has its own separate design system/CSS).
+- Nothanks link and legal disclaimer paragraph → same cleanup pattern as other pages.
+- 1-on-1 coaching bonus (first 50 customers) — left as-is per review doc ("fine as a small launch bonus, user's call") — not changed.
 
 ### `bundle/` — ShowcaseAI Bundle
 - Remove: "1,000 Total Credits Across the Entire Bundle."
