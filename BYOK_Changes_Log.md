@@ -153,11 +153,19 @@ Use these classes instead of inline `style="width:...px;height:...px;"` on any n
 - Nothanks link and legal disclaimer paragraph → same cleanup pattern as other pages.
 - 1-on-1 coaching bonus (first 50 customers) — left as-is per review doc ("fine as a small launch bonus, user's call") — not changed.
 
-### `bundle/` — ShowcaseAI Bundle
-- Remove: "1,000 Total Credits Across the Entire Bundle."
-- Reframe: *"Everything unlocked — unlimited creation across every tool, with your own AI access. One payment. No credits. No monthly."*
-- Anchor: prefer honest subscription-savings anchor over inflated "$4,997" value claim.
+### `bundle/index.html` — ShowcaseAI Bundle — DONE (2026-07-27)
+This is the biggest/most complex page (4-product recap: Pro, Agency Plus, Traffic Suite, AI Mastery, each with its own feature list + "Worth $X/Month, Sold For $Y" value-stack box, then one combined final offer box).
+- Pro section had a **broken line** (grammar bug, not just BYOK): "You get an additional Credits to create even more" (missing the credit-count number entirely) → rewritten to "You get HD, watermark-free exports & priority rendering" (matches the Pro-page reframe used elsewhere).
+- Main bundle box: "1,000 Total Credits Across the Entire Bundle (All Offers Combined)" → "Everything Unlocked - Unlimited Creation Across Every Tool (All Offers Combined, No Credits, No Monthly)", per the review doc's suggested copy.
+- Final pricing anchor: "Worth: ~~$4,997 Per Year~~" / "Retail Price: ~~$997 Per Year~~" / "Current Price: Low One-Time Fee!" → collapsed to "Buy Separately: ~~4 Monthly Subscriptions~~" / "Bundle Price: One Low One-Time Payment!". Deliberately did **not** invent a new specific dollar total — the page's own per-product "Worth $X/Month" numbers are inconsistent/messy (one missing a `$` sign, one where "Sold For" is higher than "Worth"), so fabricating a precise combined figure from them would just compound existing data-quality problems. Same caution as the "don't claim pennies-per-video until real cost is confirmed" rule — don't invent dollar totals either.
+- Left the 5 individual per-product "Worth $X/Month, Sold For $Y" value-stack boxes untouched — normal bundle-stacking copy, not what the review doc's "$4,997 anchor" note was about.
+- 14-Day / 14-day / 14 Day / "14 days" → 30-Day, all instances (including 2 that were inside already-dead commented-out blocks — fixed anyway for consistency in case anything ever gets uncommented).
+- JVZoo main buy image-button → text CTA using this page's own `sp_dev_btn_animation` button class (yet another distinct per-page button class - live/pro/agency/traffic-suite use `fe_green_big_btn`, ai-mastery uses `aa_btn aa_darkbtn`, bundle uses `sp_dev_btn_animation`. **Always check what CTA button class a page already uses elsewhere before adding a new "Get Instant Access" button — don't assume any prior page's class name carries over.**)
+- Legal disclaimer paragraph → same generic wording as other pages.
+- **Not touched (left for user decision, still pending):** three fully commented-out/dead blocks that never render: (1) an entire leftover JV/affiliate header nav (old "Get Affiliate Link" JVZoo link, Bonuses/JV Contest/Swipes/Jv Doc links to old Google Docs, an old guarantee box), (2) a whole unrelated **"MotoAi"** section — copy-pasted from some other, completely different product's template and never renamed, (3) a commented-out FAQ accordion section. All three are dead code with zero effect on the live page; only worth removing for file cleanliness, not functionality. User said "okay" to the main plan but this cleanup wasn't explicitly confirmed — ask before deleting.
 
-### Cross-page (all 6 pages)
-- Only Agency currently shows a price ($97) — set FE + all OTO prices from the new launchpad ladder once available.
-- Swap all buy-links/retailer references to launchpad; remove/de-index old JVZoo pages.
+### Cross-page (all 6 pages) — remaining follow-ups
+- Only Agency currently shows real prices ($27/mo, $97 one-time) — every other page's CTA is price-less ("One-Time Investment", "No Monthly Fees" style headlines with no number). Set real launchpad prices everywhere once the price ladder is finalized.
+- All `href="#"` placeholders (buy buttons, nothanks/downsell links) across all 6 pages need the real launchpad checkout URLs once available.
+- Guarantee-badge PNGs (`money_back.png` / `money_back_white.png`) still say "14 Day" in the pixels on `pro/`, `agency/`, `traffic-suite/`, and `ai-mastery/` (only `live/`'s copies were manually re-exported to 30-day so far) — each needs the same image re-export.
+- Dead/leftover code spotted along the way (JV/affiliate nav, MotoAi section, commented FAQ on `bundle/`; a stray unconditional `fbq('track','Purchase', ...)` pixel on `pro/`) — flagged per-page above, none fixed yet, all optional cleanup pending user's call.
