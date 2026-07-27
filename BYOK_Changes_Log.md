@@ -101,11 +101,19 @@ Use these classes instead of inline `style="width:...px;height:...px;"` on any n
 
 ---
 
-## 5. Per-page to-do from the original review doc (not started yet)
+## 5. Per-page progress
 
-### `pro/` (OTO1) — ShowcaseAI Pro
-- Remove: "More Video Creation Credits", "…without hitting limits too early", "more variations."
-- Reframe Pro as a QUALITY upgrade: HD/watermark-free exports + Voice Clone + priority rendering + premium template packs. Angle: *"Go from standard to studio-grade."*
+### `pro/index.html` (OTO1) — ShowcaseAI Pro — DONE (2026-07-27)
+- Hero subhead: "Unlock higher creation limits & ultra-premium assets..." → "Unlock HD exports, priority rendering & ultra-premium assets to create studio-grade videos, test more styles, & deliver faster"
+- "More Video Creation Credits" feature (appeared 3x: short grid card, detailed 3-paragraph block, comparison-list item) → renamed to "HD, Watermark-Free Exports & Priority Rendering" everywhere, with the detailed block's copy fully rewritten away from credit/limit framing to quality framing (full HD, no watermark, priority render queue). Its image `more_video.png` was **kept as-is** — user said don't touch it for now, no HD/quality-specific asset exists yet.
+- "No thanks" downsell decline text: "...miss out on extra credits, templates..." → "...miss out on HD exports, priority rendering, templates..."
+- 14-Day / 14 Day / 14-day guarantee → 30-Day everywhere (4x Test Drive Policy line, guarantee heading, guarantee body paragraph).
+- JVZoo main buy button (`i.jvzoo.com` image button) → text CTA button (`animated_btn fe_green_big_btn ...`), `href="#"` placeholder.
+- JVZoo legal disclaimer paragraph → same generic wording as live page.
+- "No thanks" skip link (`jvzoo.com/nothanks/432083`, sends to next OTO) → `href="#"` placeholder for now — **still needs the real next-offer URL** once the launchpad funnel flow is defined.
+- All 3 "Test Drive Policy: 30 Day Money Back Guarantee" CTA blocks → same badge-row treatment as live (comment out the line, add ✅ No monthly fees / No credit limits / One-time payment checkmark row using `fe_badge_icon`). Pro's own "One Time Investment | No Monthly Fees" pill headline was left alone — it's already short and has no credit language, doesn't need the live page's longer-sentence rewrite.
+- No FAQ or comparison table exists on this page — no BYOK-disclosure Q&A needed here (disclosure already lives on the live/FE page).
+- Noted but NOT fixed (out of scope, pre-existing bug): a `fbq('track','Purchase', ...)` conversion pixel fires unconditionally near the top of `<body>` on every page load, not just after an actual purchase.
 
 ### `agency/` (OTO2) — ShowcaseAI Agency Plus
 - Remove: "additional 500 Credits at once", "additional 100 Credits per month."

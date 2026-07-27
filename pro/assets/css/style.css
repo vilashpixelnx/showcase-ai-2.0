@@ -279,12 +279,12 @@ button {
 .sc_banner_badge::after {
   content: "";
   position: absolute;
-  top: -8px;             
+  top: -8px;
   left: 50%;
   transform: translateX(-50%);
   width: 14px;
   height: 14px;
-  background: #ffffff;    
+  background: #ffffff;
   border: 3px solid #19b56f;
   border-radius: 50%;
 }
@@ -374,15 +374,14 @@ button {
     border-radius: 20px;
     background-image: none;
     max-width: 600px;
-    min-height: 500px;
+    height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
-    /* justify-content: center; */
+    justify-content: center;
 }
 .sp_grid_step_wrapper.sp_grid_step_voiceclone1 {
     background-image: url(../images/box_cover1.png);
@@ -391,13 +390,7 @@ button {
     background-image: url(../images/box_cover2.png);
 }
 .sp_grid_step_text {
-    padding: 0 40px 0;
-}
-.sp_grid_step_wrapper.sp_grid_step_voiceclone1 .sp_grid_step_text {
-    padding: 40px 40px 0;
-}
-.sp_grid_step_wrapper.sp_grid_step_voiceclone2 .sp_grid_step_text {
-    padding: 40px 40px 0;
+    padding: 0 40px 20px;
 }
 .sp_grid_step_text h3 {
     font-size: 22px;
@@ -457,14 +450,14 @@ button {
     height: 530px;
 }
 .sp_slider_parent{
-    overflow: hidden;  
-    position: relative;  
+    overflow: hidden;
+    position: relative;
 }
 .sp_temp_slider:before, .sp_temp_slider:after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 200px;    
+    height: 200px;
     z-index: 11;
 }
 .sp_slider_parent> ul{
@@ -489,7 +482,7 @@ button {
       transform: translate3d(0, -50%, 0);
     }
 }
-.sp_center_slider{    
+.sp_center_slider{
     animation: scroll-bottom 30s linear infinite;
 }
 @keyframes scroll-bottom {
@@ -1156,6 +1149,9 @@ transform: translateX(19px);
 .v_responsive{
     display: none;
 }
+.fe_grid_section .row {
+    row-gap: 30px;
+}
 }
 @media (max-width: 1799px) {
     .pro_vector1 {
@@ -1394,9 +1390,6 @@ transform: translateX(19px);
     }
     .sp_grid_step_wrapper {
         margin: 0 auto 30px;
-    }
-    .sp_grid_step_wrapper {
-        min-height: auto;
     }
     .sp_grid_step_wrapper.sp_grid_step_custom {
         flex-direction: column;
