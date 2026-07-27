@@ -1331,6 +1331,11 @@ ul.sc_list_yl li {
     margin-right: 10px;
 }
 
+.fe_badge_icon {
+    width: 20px;
+    height: auto;
+}
+
 /* final buy section  section end  */
 .fe_dark_box_li {
     border-radius: 10px;

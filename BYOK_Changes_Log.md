@@ -128,10 +128,16 @@ Use these classes instead of inline `style="width:...px;height:...px;"` on any n
 - Legal disclaimer paragraph → same generic wording as live/pro.
 - All 4 "Test Drive Policy" CTA blocks (top hero, Agency card footer, Agency Plus card footer, bottom section) → same checkmark badge-row treatment as live/pro. Note: this page's asset path for the icon is `./assets/images/final_buy/green_right.png` (unlike `pro/`, which has it at the flat `./assets/images/green_right.png` with no `final_buy` folder) — **each page's asset layout differs, always verify the icon path exists per-page rather than assuming it matches the last page.**
 
-### `traffic-suite/` (OTO3) — ShowcaseAI Traffic Suite
-- Remove: "Use your included credits."
-- Reframe as extra AI MODELS (BYOK): *"Unlock & connect the top premium models — Seedance, Kling 2.1, Sora 2, Flux 2 Pro, GPT-Image, Seedream — with your own keys, so it's genuinely unlimited."*
-- Its existing "Unlimited Creative Variations" claim becomes true under BYOK — lean into it.
+### `traffic-suite/index.html` (OTO3) — ShowcaseAI Traffic Suite — DONE (2026-07-27)
+- Nano Banana model description: "...ideal for high-volume creation without excessive credit usage" → "...without slowing you down."
+- Guarantee-section testimonial line: "Use your included credits." → "Create without limits."
+- "Unlimited Creative Variations Without Extra Tools or Subscriptions" section — kept as-is (already true, matches the review doc's "good news, lean into it") and added one reinforcing line: "You're connected straight to the AI models, so 'unlimited' here isn't a marketing word - it's genuinely how it works." This page already names the specific models (Nano Banana, Flux 2 Pro, Seedream 4.5, Seedance 1 Lite/Pro/Pro Fast, Kling 2.1, Sora2) in its own model-spotlight cards and comparison list, so no new model-list copy was needed — just the BYOK tie-in.
+- **Dead code cleanup (not BYOK-related):** deleted an entire commented-out `<!-- -->` "No thanks" block that was leftover copy-pasted from the Pro page (still said "Pro upgrade" / "extra credits" inside the comment) — it never rendered, just removed the cruft. The real, active "No thanks, I'll Pass on the Traffic Suite" decline block already had correct Traffic-Suite-specific copy, no bug there.
+- 14-Day / 14-day / 14 Day / "14 days" (guarantee heading, 2 body mentions, 4 CTA blocks) → 30-Day, all instances.
+- JVZoo: header "Upgrade Now" link, main buy image-button, and the **live nothanks decline link** (`jvzoo.com/nothanks/432955` — easy to miss since the dead commented-out nothanks block nearby used a different, already-dead JVZoo ID) → all `href="#"`. Image-button replaced with a text CTA like other pages.
+- Legal disclaimer paragraph → same generic wording as other pages.
+- All 4 "Test Drive Policy" CTA blocks → checkmark badge-row. This page's stylesheet didn't have `.fe_badge_icon` yet (each page has its own separate `style.css`, this class isn't shared across pages) — added it to `traffic-suite/assets/css/style.css` near its own "final buy section" comment block, using `height: auto` per the live-page convention. Icon path here is `./assets/images/final_buy/green_right.png` (same as agency, different from pro).
+- Also found and cleaned up a pre-existing empty `style=""` attribute on the nothanks heading (flagged by the linter, unrelated to BYOK, harmless but pointless).
 
 ### `ai-mastery/` (OTO4) — ShowcaseAI AI Mastery
 - Remove/change: "No third-party dependencies" — directly contradicts BYOK, drop it.
