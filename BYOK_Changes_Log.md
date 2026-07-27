@@ -115,10 +115,18 @@ Use these classes instead of inline `style="width:...px;height:...px;"` on any n
 - No FAQ or comparison table exists on this page — no BYOK-disclosure Q&A needed here (disclosure already lives on the live/FE page).
 - Noted but NOT fixed (out of scope, pre-existing bug): a `fbq('track','Purchase', ...)` conversion pixel fires unconditionally near the top of `<body>` on every page load, not just after an actual purchase.
 
-### `agency/` (OTO2) — ShowcaseAI Agency Plus
-- Remove: "additional 500 Credits at once", "additional 100 Credits per month."
-- Keep real features: Fashion/Try-On videos, unlimited fashion avatars, social scheduler, 20-client workspace, commercial/agency license.
-- Pricing: lead with $97 one-time, keep $27/mo as softer alt — reconcile with new launchpad price ladder.
+### `agency/index.html` (OTO2) — ShowcaseAI Agency / Agency Plus — DONE (2026-07-27)
+- Top "upgrade boxes" (6 boxes): Box #1 "Get 100 Extra Credits Every Month" → "Create Without Limits" / "No monthly cap on videos - create as much fashion, ad, and client content as your agency needs." (image kept as-is, same precedent as Pro's `more_video.png`). Boxes 2-6 (fashion/try-on, unlimited avatars, scheduling, templates, client workspace) were already credit-free, untouched.
+- "Extra monthly credits so production never stalls or stops" → "No creation caps, so production never stalls or stops."
+- 3-step "how it works" Step #1: "Use your monthly credits to generate..." → "Generate videos, ads, or fashion try-on content..., with no creation limits to work around."
+- "No credit sharing hacks. No manual exports and uploads..." → "No shared-login workarounds. No manual exports and uploads..." (the "credit sharing" phrase was really about not needing shared logins/pooled accounts across a team, not about AI credits — reworded to keep that meaning without the word "credit").
+- **Pricing cards** (this page sells two tiers side by side: Agency $27/month and Agency Plus $97 one-time, with otherwise IDENTICAL feature lists — only the credit amount differed: "100 Credits per month" vs "500 Credits at once"). Removed both, replaced with commitment-framing instead of a feature differentiator: $27/mo card → "Lower monthly commitment to get started"; $97 one-time card → "One payment. Done. No recurring charge." Both tiers otherwise keep the same real feature list (Fashion/Try-On videos, unlimited fashion avatars, social scheduler, 20-client workspace, templates).
+- **Bug fix (unrelated to BYOK, found while reviewing):** the bottom "No thanks" downsell link was copy-pasted from the Pro page verbatim — it said "I don't want to unlock **Pro** features... miss out on extra credits... included in the **Pro** upgrade" on the Agency page. Fixed to say "Agency" and reference fashion videos / client workspaces / commercial license instead.
+- 14-Day / 14-day / "14 ... Day" (one instance had the guarantee text split across lines with no hyphen) → 30-Day, 4 occurrences.
+- 2 JVZoo image buttons (Agency `432085`, Agency Plus `433389`) → text CTA buttons, `href="#"`.
+- Nothanks skip link (`jvzoo.com/nothanks/432085`) → `href="#"` placeholder (same open item as Pro: needs the real next-offer URL later).
+- Legal disclaimer paragraph → same generic wording as live/pro.
+- All 4 "Test Drive Policy" CTA blocks (top hero, Agency card footer, Agency Plus card footer, bottom section) → same checkmark badge-row treatment as live/pro. Note: this page's asset path for the icon is `./assets/images/final_buy/green_right.png` (unlike `pro/`, which has it at the flat `./assets/images/green_right.png` with no `final_buy` folder) — **each page's asset layout differs, always verify the icon path exists per-page rather than assuming it matches the last page.**
 
 ### `traffic-suite/` (OTO3) — ShowcaseAI Traffic Suite
 - Remove: "Use your included credits."
