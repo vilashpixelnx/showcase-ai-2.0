@@ -918,7 +918,7 @@ p {
     left: -33px;
 }
 .sc_only_mobile {
-    display: flex !important;
+    display: flex;
     gap: 130px;
 }
 /* Slider */
