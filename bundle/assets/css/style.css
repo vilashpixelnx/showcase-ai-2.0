@@ -7316,3 +7316,7 @@ input[type=number] {
     }
 }
 /* Banner VSL video end */
+
+.forgeContainer .btn-forge-continue {
+    display: none!important;
+}
