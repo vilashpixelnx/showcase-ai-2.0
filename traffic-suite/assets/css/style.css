@@ -1485,6 +1485,17 @@ ul.sc_list_yl li {
     opacity: 1;
 }
 
+.forgeContainer .price-wrap span:first-child {
+    text-shadow: none!important;
+    color: #9d9d9d;
+}
+.forgeContainer .price-wrap span:last-child {
+    color: var(--primary-color);
+}
+.forgeContainer .tagline {
+    color: #141414;
+}
+
 /* Footer section end  */
 
 @media (min-width: 576px) {
