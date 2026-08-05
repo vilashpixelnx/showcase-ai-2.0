@@ -1894,3 +1894,14 @@ button {
     }
 
 }
+
+.forgeContainer .price-wrap span:first-child {
+    text-shadow: none!important;
+    color: #9d9d9d;
+}
+.forgeContainer .price-wrap span:last-child {
+    color: var(--primary-color);
+}
+.forgeContainer .tagline {
+    color: #141414;
+}
