@@ -1,5 +1,5 @@
 /*
-[Master Stylesheet] 
+[Master Stylesheet]
 Project:
 -------------------------------------------------------------------*/
 /********************************************************
@@ -1043,7 +1043,7 @@ p {
 /* Banner css start */
 .sc_banner_wrapper {
     background-image: url(../images/banner-bg.webp);
-    padding: 60px 0 120px 0;
+    padding: 60px 0 60px 0;
 }
 
 /* .sc_banner_wrapper::before {
@@ -7205,3 +7205,114 @@ input[type=number] {
         flex-wrap: wrap;
     }
 }
+
+/* Promo bar start */
+.sc_promo_bar {
+    background: var(--dark-bg);
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+}
+.sc_promo_bar.sc_promo_bar_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: sc_promo_bar_slide_down .45s ease forwards;
+}
+@keyframes sc_promo_bar_slide_down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.sc_promo_bar .container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.sc_promo_bar_inner {
+    gap: 10px 20px;
+}
+.sc_promo_bar_left,
+.sc_promo_bar_middle {
+    color: var(--white-color);
+}
+.sc_promo_bar_btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white-color) !important;
+    padding: 10px 22px;
+    border-radius: 30px;
+    white-space: nowrap;
+}
+.sc_promo_bar_btn:hover {
+    opacity: .9;
+}
+@media (max-width: 767px) {
+    .sc_promo_bar .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sc_promo_bar_inner {
+        justify-content: center;
+        text-align: center;
+    }
+}
+/* Promo bar end */
+
+/* Banner VSL video (ported from live) start */
+.fe_video_wrapper_with_icon {
+    width: 100%;
+}
+.fe_video_wrapper {
+    background: linear-gradient(180deg, #06B873 0%, rgba(255, 255, 255, 0) 100%);
+    max-width: 740px;
+    border-radius: 20px;
+    width: 100%;
+    flex: 1;
+    padding: 1%;
+    margin: auto;
+}
+.fe_video_wrapper iframe {
+    border-radius: 20px;
+}
+.click_unmute {
+    position: absolute;
+    left: -20%;
+    animation: 05s ani_top infinite alternate;
+}
+@keyframes ani_left_right {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+@media (max-width: 1599px) {
+    .click_unmute {
+        left: -13%;
+    }
+    .click_unmute img.img-fluid {
+        width: 100px;
+    }
+}
+@media (max-width: 1199px) {
+    .click_unmute {
+        left: -19%;
+        top: -40px;
+        right: 0;
+        margin: auto;
+        animation: 05s ani_left_right infinite alternate;
+    }
+}
+@media (max-width: 991px) {
+    .click_unmute {
+        display: none;
+    }
+}
+/* Banner VSL video end */

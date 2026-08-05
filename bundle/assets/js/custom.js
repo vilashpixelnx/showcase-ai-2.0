@@ -16,7 +16,8 @@ Project:
             }
             /*---------------------- ShowcaseAI Functions Calling ----------------------*/
 			this.StickyHeader();
-            this.HeaderMenu();            
+            this.PromoBarSticky();
+            this.HeaderMenu();
             this.VideoLazyLoad();
             this.ButtonEffect();
             this.BannerSlider();                                    
@@ -50,6 +51,28 @@ Project:
         },
 
 		// Sticky Header
+
+        // Promo Bar Sticky
+        PromoBarSticky: function() {
+            var $bar = $('.sc_promo_bar');
+            var $wrapper = $('.sc_page_main_wrapper');
+            if (!$bar.length) return;
+            $(window).on('scroll', function() {
+                if ($(window).scrollTop() > 100) {
+                    if (!$bar.hasClass('sc_promo_bar_fixed')) {
+                        var barHeight = $bar.outerHeight();
+                        $bar.addClass('sc_promo_bar_fixed');
+                        $wrapper.css('margin-top', barHeight + 'px');
+                    }
+                } else {
+                    if ($bar.hasClass('sc_promo_bar_fixed')) {
+                        $bar.removeClass('sc_promo_bar_fixed');
+                        $wrapper.css('margin-top', '');
+                    }
+                }
+            });
+        },
+        // Promo Bar Sticky
 
         // Header Menu
 		HeaderMenu: function(){
