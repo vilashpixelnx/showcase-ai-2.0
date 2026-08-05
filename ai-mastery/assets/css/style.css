@@ -1431,6 +1431,14 @@ canvas#bodyParticalCanvas {
 	--lightness: 95%;
 	background: hsla(var(--hsl), .1)
 }
+
+.forgeContainer .btn-forge-continue {
+    color: #ffffff !important;
+}
+
+.forgeContainer .btn-forge {
+    border: 2px solid #ffffff !important;
+}
 .pxg_notification {
 	position: fixed;
 	right: -406px;
