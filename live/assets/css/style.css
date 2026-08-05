@@ -1061,14 +1061,6 @@ width: 109px;
 .sc_faq_wrapper .container{
     max-width: 1400px;
 }
-.sc_faq_parent{
-    gap: 15px;
-}
-
-.sc_faq_right{
-    max-width: 650px;
-    width: 100%;
-}
 .accordion-button:not(.collapsed) {
     background: #FFFFFF0D !important;
     background: transparent !important;
@@ -1228,17 +1220,8 @@ width: 109px;
         bottom: -33px;
     }
     /* with and without */
-    .sc_faq_parent {
-        flex-direction: column;
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center;
-    }
     .accordion-item {
         text-align: left;
-    }
-    .sc_faq_img img {
-        max-width: 130px;
     }
     .fe_v_section_wrap {
         border-radius: 20px;
