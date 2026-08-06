@@ -1580,5 +1580,5 @@ width: 109px;
     color: var(--primary-color);
 }
 .forgeContainer .tagline {
-    color: #141414;
+    color: #141414!important;
 }
