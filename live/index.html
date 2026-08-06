@@ -78,13 +78,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="fe_header_inner">
-                        <a href="#" class="fe_header_logo">
-                            <img loading="lazy" src="./assets/images/logo_white.png" alt="image" class="img-fluid">
-                        </a>
-                        <h2 class="white-color xxl20 xl19 lg18 md17 sm16 xs13 zs13 w700">Use Coupon <span
-                                class="primary-color w800">“SHOW35”</span> to snag 35% off</h2>
+                        <h2 class="fe_wraninig_btn br_10 rounded-pill dark-color w800 xxl18 xl17 lg16 md15 sm14 xs13 zs13 xsmb1 zsmb2 d-inline-flex align-items-center gap-2 mb-0"><img loading="lazy" src="./assets/images/warning.png"
+                                alt="image" class="img-fluid" style="width:20px;filter: drop-shadow(0px 0px 2px black);">Hurry Up! Limited Time Offer</h2>
+                        <h2 class="dark-color xxl20 xl19 lg18 md17 sm16 xs13 zs13 w700">Use Coupon <span
+                                class="fe_coupon_code_badge w800">“SHOW35”</span> to snag 35% off</h2>
                         <a href="https://launchpadjv.com/product/checkout/4217?page=3534&offer=435&offerProduct=4819"
-                            class="fe_green_btn green-gradient white-color xxl20 xl19 lg18 md17 sm13 xs13 zs13 w700 rounded-pill">Get
+                            class="fe_header_cta_btn xxl20 xl19 lg18 md17 sm13 xs13 zs13 w700 rounded-pill">Get
                             Instant Access to ShowcaseAI</a>
                     </div>
                 </div>
@@ -97,6 +96,10 @@
                 <div class="col-12">
                     <div class="fe_video_main_wrapper lgmb2 zsmb2 text-center">
                         <div class="fe_banner_details_box">
+                            <div class="text-center xsmb2 zsmb3">
+                                <img loading="lazy" src="./assets/images/logo_white.png" alt="ShowcaseAI"
+                                    class="img-fluid" style="max-width:220px;">
+                            </div>
                             <div class="lgmb1 smmb2 zsmb2">
                                 <div class="fe_banner_title1_wrap green_border_bg_white_pill d-inline-block">
                                     <h2
@@ -4794,6 +4797,123 @@
         });
 
 
+    </script>
+
+    <!-- EXIT-INTENT OFFER POPUP -->
+    <div class="exit-popup-overlay" id="exitPopupOverlay" aria-hidden="true">
+        <div class="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exitPopupTitle">
+            <button class="exit-popup-close" id="exitPopupClose" type="button" aria-label="Close this offer">×</button>
+
+            <div class="ep-decor" aria-hidden="true">
+                <span class="ep-spark s1">▲</span>
+                <span class="ep-spark s2">▲</span>
+                <span class="ep-spark s3">✦</span>
+                <span class="ep-spark s4">▲</span>
+            </div>
+
+            <div class="ep-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="42" height="42">
+                    <defs>
+                        <linearGradient id="epIconGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#60a5fa" />
+                            <stop offset="100%" stop-color="#a78bfa" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M12 3.2 L21.6 20.5 H2.4 Z" fill="none" stroke="url(#epIconGrad)" stroke-width="1.8"
+                        stroke-linejoin="round" />
+                    <line x1="12" y1="9.4" x2="12" y2="14.2" stroke="url(#epIconGrad)" stroke-width="1.8"
+                        stroke-linecap="round" />
+                    <circle cx="12" cy="17" r="1" fill="url(#epIconGrad)" />
+                </svg>
+            </div>
+
+            <h2 class="ep-title" id="exitPopupTitle"><span class="ep-title-grad">WAIT!</span> Don't Miss This Deal
+            </h2>
+            <span class="ep-underline" aria-hidden="true"></span>
+
+            <p class="ep-coupon-line">Use The Code <span class="ep-code">SHOW35</span> On Checkout</p>
+
+            <span class="ep-offer-upto">UP TO</span>
+            <div class="ep-offer"><span class="ep-offer-num">35</span><span class="ep-offer-pct">%</span> <span
+                    class="ep-offer-word">OFF</span></div>
+
+            <p class="ep-price-line">Regular Price: <span class="ep-price-strike">$19.00</span> <span
+                    class="ep-price-sep">|</span> <span class="ep-price-now">Discount Price: $11.61</span></p>
+
+            <a href="https://launchpadjv.com/product/checkout/4217?page=3534&offer=435&offerProduct=4819"
+                target="_blank" class="ep-cta" id="exitPopupCta">
+                <span class="ep-cta-dots" aria-hidden="true"></span>
+                <span class="ep-cta-label">GET INSTANT ACCESS</span> <span class="ep-cta-arrow">→</span>
+            </a>
+
+            <p class="ep-foot">🔒 Secure Checkout · One-Time Payment · No Hidden Fees</p>
+        </div>
+    </div>
+
+    <script>
+        (function initExitPopup() {
+            var overlay = document.getElementById('exitPopupOverlay');
+            if (!overlay) return;
+            if (!window.matchMedia('(pointer: fine)').matches) return; // no hover/mouse-leave on touch devices
+
+            var closeBtn = document.getElementById('exitPopupClose');
+            var STORAGE_KEY = 'showcaseai_exit_popup_shown';
+            var shown = false;
+            var armed = false;
+
+            try {
+                if (sessionStorage.getItem(STORAGE_KEY)) shown = true;
+            } catch (_) {}
+
+            function openPopup() {
+                if (shown) return;
+                shown = true;
+                try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch (_) {}
+                overlay.classList.add('is-visible');
+                overlay.setAttribute('aria-hidden', 'false');
+            }
+
+            function closePopup() {
+                overlay.classList.remove('is-visible');
+                overlay.setAttribute('aria-hidden', 'true');
+            }
+
+            document.documentElement.addEventListener('mouseleave', function (e) {
+                if (armed && !shown && e.clientY <= 0) openPopup();
+            });
+
+            setTimeout(function () { armed = true; }, 3000);
+            setTimeout(function () { if (!shown) openPopup(); }, 20000); // 20s fallback trigger
+
+            if (closeBtn) closeBtn.addEventListener('click', closePopup);
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closePopup();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && overlay.classList.contains('is-visible')) closePopup();
+            });
+        })();
+    </script>
+
+    <script>
+        (function syncBannerPaddingToHeader() {
+            var header = document.querySelector('.fe_header_wrap');
+            var banner = document.querySelector('.fe_banner_wrap');
+            if (!header || !banner) return;
+
+            function applyPadding() {
+                banner.style.paddingTop = (header.offsetHeight + 20) + 'px';
+            }
+
+            applyPadding();
+
+            if (window.ResizeObserver) {
+                new ResizeObserver(applyPadding).observe(header);
+            } else {
+                window.addEventListener('resize', applyPadding);
+            }
+            window.addEventListener('load', applyPadding);
+        })();
     </script>
 
 </body>
