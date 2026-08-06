@@ -169,6 +169,61 @@ This is the biggest/most complex page (4-product recap: Pro, Agency Plus, Traffi
 - Legal disclaimer paragraph → same generic wording as other pages.
 - **Not touched (left for user decision, still pending):** three fully commented-out/dead blocks that never render: (1) an entire leftover JV/affiliate header nav (old "Get Affiliate Link" JVZoo link, Bonuses/JV Contest/Swipes/Jv Doc links to old Google Docs, an old guarantee box), (2) a whole unrelated **"MotoAi"** section — copy-pasted from some other, completely different product's template and never renamed, (3) a commented-out FAQ accordion section. All three are dead code with zero effect on the live page; only worth removing for file cleanliness, not functionality. User said "okay" to the main plan but this cleanup wasn't explicitly confirmed — ask before deleting.
 
+### NEW DECISION (2026-08-06) — starter credits are being reintroduced, FAQ-only
+**This partially supersedes Global Rule #1 ("kill all credit language").** The product will now
+include a one-time bundle of free starter credits per offer, on top of BYOK. Credits are NOT a
+tier differentiator or ongoing plan feature anywhere else on the page (hero, comparison table,
+buy boxes, badge rows, etc. all stay as-is, still "unlimited/no credit limits" once the user
+connects their own key) — this is disclosed **only as a new FAQ Q&A per page**, worded so the
+one-time/non-renewing nature is explicit and it doesn't contradict the "unlimited via BYOK"
+positioning used everywhere else.
+
+New FAQ Q&A to add, one page at a time (not yet applied to any page — pending confirmation per
+[[feedback-byok-page-workflow]]):
+
+- **`pro/index.html` (Frontend/Pro — note: 50 credits applies to `live/` Frontend too, same offer tier)**
+  Q: *"Are credits included with this offer?"*
+  A: *"Yes. This offer includes 50 free starter credits so you can begin creating content
+  immediately. Once the included credits are used, you can continue using ShowcaseAI by adding
+  your own supported AI API key. The included credits are a one-time promotional bonus, are not
+  unlimited, and do not renew automatically."*
+
+- **`agency/index.html`**
+  Q: *"Are credits included with this offer?"*
+  A: *"Yes. This offer includes 60 free starter credits so you can begin creating content
+  immediately. Once the included credits are used, you can continue using ShowcaseAI by adding
+  your own supported AI API key. The included credits are a one-time promotional bonus, are not
+  unlimited, and do not renew automatically."*
+
+- **`traffic-suite/index.html`**
+  Q: *"Are credits included with this offer?"*
+  A: *"Yes. This offer includes 120 free starter credits so you can begin creating content
+  immediately. Once the included credits are used, you can continue using ShowcaseAI by adding
+  your own supported AI API key. The included credits are a one-time promotional bonus, are not
+  unlimited, and do not renew automatically."*
+
+- **`bundle/index.html`**
+  Q: *"Are credits included with the ShowcaseAI Bundle?"*
+  A: *"Yes. The ShowcaseAI Bundle includes a total of 280 free starter credits from all included
+  offers, so you can begin creating content immediately. Once the included credits are used, you
+  can continue using ShowcaseAI by adding your own supported AI API key. The included credits are
+  a one-time promotional bonus, are not unlimited, and do not renew automatically."*
+
+Open items:
+- [ ] `pro/` and `agency/` currently have **no FAQ section at all** (confirmed in section 5 above -
+  "No FAQ or comparison table exists on this page"). Adding this Q&A there means adding a new FAQ
+  section/accordion to those pages for the first time, not just inserting a row into an existing one.
+- [ ] `ai-mastery/index.html` — no credit amount given by the user yet; unclear if AI Mastery gets
+  its own starter-credit FAQ entry or is left as pure BYOK (its 4-product bundle total of 280 only
+  accounts for Pro(50) + Agency(60) + Traffic Suite(120) = 230, so either AI Mastery gets 50 too,
+  or the bundle total intentionally excludes it — needs confirming with the user before touching
+  `ai-mastery/` or double-checking the bundle math).
+- [ ] `live/index.html` already has one BYOK-disclosure FAQ entry ("Do I need to connect anything?")
+  — need to confirm with user whether the new credits Q&A is a second, separate FAQ item there or
+  replaces/merges with the existing one.
+- [ ] No page has been edited yet — this section is documentation of the new copy only, per user's
+  request to update the md file first.
+
 ### Cross-page (all 6 pages) — remaining follow-ups
 - Only Agency currently shows real prices ($27/mo, $97 one-time) — every other page's CTA is price-less ("One-Time Investment", "No Monthly Fees" style headlines with no number). Set real launchpad prices everywhere once the price ladder is finalized.
 - All `href="#"` placeholders (buy buttons, nothanks/downsell links) across `pro/`, `agency/`, `traffic-suite/`, `ai-mastery/`, `bundle/` still need the real launchpad checkout URLs.
