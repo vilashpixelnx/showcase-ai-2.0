@@ -947,7 +947,62 @@ transform: translateX(19px);
 
 
 
-
+/* FAQ css start */
+.sc_faq_wrapper .container{
+    max-width: 1400px;
+}
+.accordion-button:not(.collapsed) {
+    background: #FFFFFF0D !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    padding: 20px 25px 15px !important;
+}
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.accordion-button {
+    color: var(--darkColor) !important;
+    background: #FFFFFF0D !important;
+    background: transparent !important;
+    padding: 20px 25px !important;
+    backdrop-filter: blur(4px);
+    border-radius: 10px !important;
+}
+.accordion-item {
+    border-radius: 10px !important;
+    margin-bottom: 20px;
+    background: #C7C7C70D !important;
+    border: 1px solid #4040401A !important;
+    backdrop-filter: blur(4px);
+}
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+.accordion-body p {
+    margin-bottom: 20px;
+}
+.accordion-body p:last-child{
+    margin-bottom: 0;
+}
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+.accordion-button::after{
+    background-image: url(../images/faq-arrow.png) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 9px;
+}
+.accordion-body {
+    max-height: 400px;
+    overflow-x: hidden;
+    padding: 0 15px 15px 25px !important;
+}
+/* FAQ css end */
 
 
 
